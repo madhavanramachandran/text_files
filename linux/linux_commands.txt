@@ -1,0 +1,72 @@
+
+
+When we enter a command in the terminal, the commands is interpretted by the `shell`.
+Terminal is like a window to a shell.
+Shell works like a interpreter. For the same command, different shell may works differently.
+commands are case-sensitive.
+
+
+
+All commands are small computer program, embedded into the computer.
+The programms will be searched in the shell path. ($PATH).
+
+If two paths have same commands, then the command first found in the path will be executed.
+To check the folder from where the command runs [ $ which <command_name> ]
+
+
+
+
+There are two ways to get data in and two ways for data out.
+Standard Input, Standard Output and Standard Error are standard data streams.
+
+Command line arguments are much like static.
+
+Data streams can be redirected. Like we can redirect standard output of one command to standard input of another command. (piping)
+
+Standard Input, Standard Outpu and Standard Error are the names of the streams.
+Each have number associated with it. 
+0 - Standard Input
+1 - Standard Output
+2 - Standard Error
+
+##########################################################################################
+
+ctrl + L 		:: 	clear
+alt + ctrl + t 	:: 	terminal
+
+
+Calendar:
+	$ cal 
+	$ cal -y 2018
+	$ cal -A/B 1 12 2018 : -A is `after`/ `before`
+	$ date : prints the date in current time zone
+	$ date -u : prints the UTC time
+	$ date --universal : UTC time
+
+History:
+	$ history
+	$ !<command_number_in_history> will run the same command again.
+	$ !! - runs the recent command
+	$ history -c : clears the history
+
+
+Manual:
+	- 8 sections
+	$ man -k which : 
+	$ man 1 which : man [section_number] [command_to_search]
+
+
+cat:
+	$ cat > output.txt : redirects the input to the output.txt file.
+	$ cat 1> output.txt : the same as above. we mention the number of `Standard Output`. (no space btw 1 and >) - replaces the content of the file.
+
+	$ cat 1>> output.txt : basically a redirection. Appends to the end of the file.
+	$ cat 2>> error.txt : writes errors to the error.txt file. `2` is mandatory to mention the redirection of errors to the file.
+	$ cat 1>> output.txt 2>>errro.txt : combining both in single command
+
+	$ cat < src.txt > dest.txt
+	$ cat 0<src.txt 1> dest.txt - reads from src and writes to dest file.
+
+	- Terminal is treated as file. We can get the path of terminal by typing `tty` command.
+	$ cat < src.txt > [terminal] : writes the content of src to the terminal.
+
