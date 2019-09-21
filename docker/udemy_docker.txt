@@ -1,0 +1,24 @@
+
+The continaer will have isolated set of ports.
+It can access the internet (outbound) is not restricted.
+For any inboud, it is restricted, we need to map the port of the container to the external network container.
+
+############################################################
+
+docker build .
+	- uses the Dockerfile to build the image(s) using the docker instructions
+	- for each instruction, an temp container (with image from the previous step) is created with the instruction and will be passed on to the next instruction.
+	- docker will try to use the exiting cache if any.
+	- if any change is made in the Dockerfile, only the images has to be rebuilt from the instruction where the change is made. Else it uses caches to fetch the images.
+
+docker build -t <docker_id>/<label>:<verion> .
+	- docker build -t madhavanr:spring-test:latest .
+	- here `madhavanr` is my docker hub id. `spring-test` is my project name or label.
+	- by building the Dockerfile, the project directory and files will not be available to the container by default.
+	- so we need to copy the jar or project files to the container before building and starting the application.
+
+docker run -p <local_port>:<container_port> <docker_id>/<label>
+
+docker run -p <local_port>:<container_port> <container_id>
+
+
