@@ -1,0 +1,54 @@
+
+Aws Certified Solutions Architect.
+
+Region contains two or more availability zones.
+AZ can be considered as like data centers.
+Edger locations - cloutfront and Amazon's CDN - for caching.
+
+
+########################################################
+
+IAM allows you to manage users and thier access to the AWS console.
+- Setup user, group, permission, role.
+- Identity Access Management
+- Idendity Federation (including Active directory, Facebook, LinkedIn...)
+- Multifactor authentication
+- temporary access when necessary 
+- setup password rotation policy
+- integrates with aws services.
+- PCI DSS compliance.
+
+USERS:
+
+GROUPS:
+	- Collection of users.
+
+POLICIES:
+	- made of documents (JSON)
+	- permission to what user group/ role/ user can able to do.
+
+ROLES:
+	- for aws resources.
+	- like write/ read etc..
+
+
+For IAM users, the region is always GLOBAL.
+Its is not specific to any region.
+Whatever we do in IAM page is for root user.
+
+
+Creating new Users:
+	- Programmatic access
+	- AWS Management Console access
+
+
+
+	- create a group or add the user to the existing group.
+	Once added to the group, we can add tags.
+
+	- we will get 
+		- User
+		- Access Key ID
+		- Secret access Key
+		- Password
+		
