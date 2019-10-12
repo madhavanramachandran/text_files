@@ -17,6 +17,11 @@ Host github-maddy
 - Validate the connection:
  ```ssh -T git@github-maddy```
 
+- To set the remote git url in my local repo
+  > `git remote set-url origin git@github-maddy:madhavanramachandran/text_files.git`
+  - Then we can able to push the files to this repo without any more prompts.
+#
+
 
 References:
 
