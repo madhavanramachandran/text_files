@@ -14,3 +14,5 @@ Assuming, we have running instance of nginx in our system.
 * apt package management system
 * GPG package signing key 
 * `ps` command - running process in system
+
+* 
